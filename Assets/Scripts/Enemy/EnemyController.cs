@@ -13,14 +13,14 @@ namespace Enemy
     public class EnemyController : MonoBehaviour
     {
         private GameObject player;
-        private CharacterController characterController;
         private NavMeshAgent navMeshAgent;
+        private CapsuleCollider capsuleCollider;
         [SerializeField] private GameObject rightFootPrint;
         [SerializeField] private GameObject leftFootPrint;
 
 
-        private double walkedDistance = 0.0f;   // 歩いた距離
-        private double stepLength = 1f;
+        private float walkedDistance = 0.0f;   // 歩いた距離
+        private float stepLength = 1f;
         private Vector3 lastPosition;
         private bool flg = false;
 
@@ -31,6 +31,7 @@ namespace Enemy
         {
             player = GameObject.FindGameObjectWithTag("Player");
             navMeshAgent = GetComponent<NavMeshAgent>();
+            capsuleCollider = GetComponent<CapsuleCollider>();
 
             state = EnemyCondition.Chase;
             lastPosition = transform.position;
@@ -43,14 +44,18 @@ namespace Enemy
             walkedDistance += Vector3.Distance(transform.position, lastPosition);
             if (walkedDistance > stepLength)
             {
+                Vector3 instantiatePosition = new Vector3(transform.position.x, transform.position.y - capsuleCollider.height / 2f - 0.05f, transform.position.z);
+
                 if (flg)
-                {
-                    Instantiate(rightFootPrint, transform.position, transform.rotation);
+                { 
+                    GameObject footprint = Instantiate(rightFootPrint, instantiatePosition, transform.rotation);
+                    footprint.transform.position += footprint.transform.right * 0.2f;
                     flg = false;
                 }
                 else
                 {
-                    Instantiate(leftFootPrint, transform.position, transform.rotation);
+                    GameObject footprint = Instantiate(leftFootPrint, instantiatePosition, transform.rotation);
+                    footprint.transform.position += footprint.transform.right * -0.2f;
                     flg = true;
                 }
                 walkedDistance = 0.0f;
