@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.SceneManagement;
 
 namespace Enemy
 {
@@ -75,6 +76,14 @@ namespace Enemy
             }
 
             lastPosition = transform.position;
+        }
+
+        public void OnTriggerEnter(Collider other)
+        {
+            if(other.tag == "Player")
+            {
+                SceneManager.LoadScene("GameOver");
+            }
         }
     }
 }
