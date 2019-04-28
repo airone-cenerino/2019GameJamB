@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -12,11 +13,15 @@ namespace Enemy
 
     public class EnemyController : MonoBehaviour
     {
+        // Enemyにアタッチされているコンポーネント
+        private AudioSource audioSource;
+        private CapsuleCollider capsuleCollider;
         private GameObject player;
         private NavMeshAgent navMeshAgent;
-        private CapsuleCollider capsuleCollider;
+
         [SerializeField] private GameObject rightFootPrint;
         [SerializeField] private GameObject leftFootPrint;
+        [SerializeField] private List<AudioClip> audioClips;
 
 
         private float walkedDistance = 0.0f;   // 歩いた距離
@@ -29,9 +34,10 @@ namespace Enemy
         // Start is called before the first frame update
         void Start()
         {
-            player = GameObject.FindGameObjectWithTag("Player");
-            navMeshAgent = GetComponent<NavMeshAgent>();
+            audioSource = GetComponent<AudioSource>();
             capsuleCollider = GetComponent<CapsuleCollider>();
+            navMeshAgent = GetComponent<NavMeshAgent>();
+            player = GameObject.FindGameObjectWithTag("Player");
 
             state = EnemyCondition.Chase;
             lastPosition = transform.position;
@@ -44,6 +50,8 @@ namespace Enemy
             walkedDistance += Vector3.Distance(transform.position, lastPosition);
             if (walkedDistance > stepLength)
             {
+                audioSource.PlayOneShot(audioClips[Random.Range(0, audioClips.Count())]);
+
                 Vector3 instantiatePosition = new Vector3(transform.position.x, transform.position.y - capsuleCollider.height / 2f - 0.05f, transform.position.z);
 
                 if (flg)
