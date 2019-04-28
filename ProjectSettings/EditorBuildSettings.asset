@@ -6,9 +6,20 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+<<<<<<< HEAD
     path: Assets/Scenes/title.unity
     guid: f939595aae6423442b047d8e01c06a14
   - enabled: 1
     path: Assets/Scenes/GameScene.unity
     guid: 1f4c17a41018f354084d1e113a9f3843
+=======
+    path: Assets/Scenes/GameScene.unity
+    guid: 1f4c17a41018f354084d1e113a9f3843
+  - enabled: 1
+    path: Assets/Scenes/GameOver.unity
+    guid: c009be0d0b1bd7546896e580d513cfbd
+  - enabled: 1
+    path: Assets/Scenes/nysyo.unity
+    guid: 33de609a3a769bf45abc81c043bcfb22
+>>>>>>> 4cececa07d9b4faecb9b3f231263ebc91e4797d0
   m_configObjects: {}
