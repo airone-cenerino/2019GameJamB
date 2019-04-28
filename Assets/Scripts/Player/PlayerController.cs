@@ -18,7 +18,7 @@ namespace Player
         // Update is called once per frame
         void Update()
         {
-            if (Input.GetMouseButtonDown(0))
+            if (Input.GetMouseButtonDown(0) || Input.GetKeyDown("joystick button 15"))
             {
                 // 画面の中心にレイを飛ばす
                 Ray ray = m_camera.ScreenPointToRay(center);
