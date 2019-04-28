@@ -9,7 +9,7 @@ namespace Enemy
 {
     enum EnemyCondition
     {
-        Chase, Wait
+        Chase, Wait, Stop
     }
 
     public class EnemyController : MonoBehaviour
@@ -73,6 +73,9 @@ namespace Enemy
             if(state == EnemyCondition.Chase)
             {
                 navMeshAgent.destination = player.transform.position;   // エージェントの目的地をPlayerの現在地に更新
+            }else if(state == EnemyCondition.Stop)
+            {
+                navMeshAgent.destination = transform.position;
             }
 
             lastPosition = transform.position;
@@ -84,6 +87,16 @@ namespace Enemy
             {
                 SceneManager.LoadScene("GameOver");
             }
+        }
+
+        public void EnemyStop()
+        {
+            state = EnemyCondition.Stop;
+        }
+
+        public void EnemyChaseStart()
+        {
+            state = EnemyCondition.Chase;
         }
     }
 }
