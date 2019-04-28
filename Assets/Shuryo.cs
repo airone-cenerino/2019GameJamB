@@ -1,4 +1,4 @@
-﻿public void GameEnd()
-{
-    Application.Quit();
-}
+﻿//public void GameEnd()
+//{
+//    Application.Quit();
+//}
