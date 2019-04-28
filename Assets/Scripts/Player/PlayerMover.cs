@@ -14,7 +14,7 @@ namespace Player
         private CharacterController controller;
         private Quaternion m_CharacterTargetRot;
         private Quaternion m_CameraTargetRot;
-        private Vector3 forward;
+        private Vector3 forward, right;
         private Vector3 moveDirection;
         // Start is called before the first frame update
         void Start()
@@ -39,7 +39,8 @@ namespace Player
             }
 #endif
             forward = new Vector3(m_Camera.transform.forward.x, 0, m_Camera.transform.forward.z).normalized;
-            moveDirection = (Input.GetAxis("Vertical") * forward + Input.GetAxis("Horizontal") * m_Camera.transform.right).normalized;
+            right = (Input.GetAxis("Horizontal") * m_Camera.transform.right);
+            moveDirection = (Input.GetAxis("Vertical") * forward + right).normalized;
             controller.SimpleMove(moveSpeed * moveDirection * Time.deltaTime);
             if (Input.GetKeyDown(KeyCode.Escape))
             {
