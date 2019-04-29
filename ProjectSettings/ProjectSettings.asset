@@ -272,7 +272,11 @@ PlayerSettings:
   m_BuildTargetPlatformIcons: []
   m_BuildTargetBatching: []
   m_BuildTargetGraphicsAPIs: []
-  m_BuildTargetVRSettings: []
+  m_BuildTargetVRSettings:
+  - m_BuildTarget: Windows Store Apps
+    m_Enabled: 1
+    m_Devices:
+    - WindowsMR
   m_BuildTargetEnableVuforiaSettings: []
   openGLRequireES31: 0
   openGLRequireES31AEP: 0
@@ -529,11 +533,11 @@ PlayerSettings:
   m_MobileRenderingPath: 1
   metroPackageName: New Unity Project
   metroPackageVersion: 
-  metroCertificatePath: 
+  metroCertificatePath: C:\Users\tds24\unity\2019GameJamB\Assets\WSATestCertificate.pfx
   metroCertificatePassword: 
-  metroCertificateSubject: 
-  metroCertificateIssuer: 
-  metroCertificateNotAfter: 0000000000000000
+  metroCertificateSubject: DefaultCompany
+  metroCertificateIssuer: DefaultCompany
+  metroCertificateNotAfter: 80bc8087f31cd601
   metroApplicationDescription: New Unity Project
   wsaImages: {}
   metroTileShortName: 
