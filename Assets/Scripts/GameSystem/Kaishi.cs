@@ -19,6 +19,6 @@ public class Kaishi : MonoBehaviour
     }
     public void Yobidashi()
     {
-        SceneManager.LoadScene("GameScene");
+        SceneManager.LoadScene("Prologue");
     }
 }

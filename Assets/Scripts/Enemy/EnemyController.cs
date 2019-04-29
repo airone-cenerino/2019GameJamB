@@ -48,6 +48,7 @@ namespace Enemy
             // 障害物による一時停止中かどうか
             if (IsPasuse)
             {
+                EnemyStop();
                 pauseRemainingTime -= Time.deltaTime;
 
                 if (pauseRemainingTime < 0f)
@@ -62,7 +63,6 @@ namespace Enemy
         {
             if (other.tag == "Door")
             {
-                Debug.Log("ドアに当たったよ");
                 EnemyPause();   // Enemy一時停止
             }
 
