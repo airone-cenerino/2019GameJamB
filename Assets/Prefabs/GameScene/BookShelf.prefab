@@ -232,7 +232,7 @@ GameObject:
   - component: {fileID: 8199335299004850444}
   m_Layer: 0
   m_Name: bookshelf1
-  m_TagString: Untagged
+  m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 8
