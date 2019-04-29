@@ -15,7 +15,10 @@ public class Kaishi : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if(Input.GetKeyDown("joystick button 15"))
+        {
+            SceneManager.LoadScene("Prologue");
+        }
     }
     public void Yobidashi()
     {
