@@ -26,7 +26,7 @@ namespace Player
                 if (Physics.Raycast(ray, out hit, 100f))
                 {
                     // アイテムに対する処理を書く
-                    hit.collider.gameObject.GetComponent<GameSystem.Item>().Use();
+                    hit.collider.gameObject.GetComponent<Item.ItemBase>().Use();
                 }
             }
         }

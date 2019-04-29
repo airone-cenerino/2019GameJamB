@@ -24,7 +24,7 @@ namespace GameSystem
         {
             if (Input.GetKeyDown(KeyCode.Q))
             {
-                enemyController.EnemyStop();
+                enemyController.EnemyForcedStop();
                 pausePanel.SetActive(true);
                 Cursor.visible = true;  //カーソル表示on
             }
@@ -34,7 +34,7 @@ namespace GameSystem
         // 以下ボタン用関数
         public void Resume()
         {
-            enemyController.EnemyChaseStart();
+            enemyController.EnemyForcedChaseStart();
             pausePanel.SetActive(false);
             Cursor.visible = false;
         }
