@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.SceneManagement;
+using Item;
 
 // Enemyにアタッチするスクリプト
 
@@ -19,8 +20,9 @@ namespace Enemy
         private NavMeshAgent navMeshAgent;
         private GameObject player;
 
+        private GameObject door;  // ぶつかった時に格納する
         private EnemyCondition state;       // Enemyのステート
-        private bool IsPasuse = false;      // Enemyが一時停止中かどうか
+        private bool IsPause = false;      // Enemyが一時停止中かどうか
         private float pauseRemainingTime = 0.0f;
 
 
@@ -46,14 +48,17 @@ namespace Enemy
             }
 
             // 障害物による一時停止中かどうか
-            if (IsPasuse)
+            if (IsPause)
             {
                 EnemyStop();
                 pauseRemainingTime -= Time.deltaTime;
 
                 if (pauseRemainingTime < 0f)
                 {
-                    IsPasuse = false;
+                    
+                    door.GetComponent<DoorController>().DoorClose();
+                  
+                    IsPause = false;
                     EnemyChaseStart();
                 }
             }
@@ -64,6 +69,7 @@ namespace Enemy
             if (other.tag == "Door")
             {
                 EnemyPause();   // Enemy一時停止
+                door = other.transform.root.gameObject;
             }
 
             if (other.tag == "Player")
@@ -71,18 +77,30 @@ namespace Enemy
                 SceneManager.LoadScene("GameOver");
             }
 
+            if (other.tag == "Books")
+            {
+                WalkSlowly();   // Enemy一時停止
+            }
+        }
 
+        public void OnTriggerExit(Collider other)
+        {
+            if(other.tag == "Books")
+            {
+                WalkNormally();
+            }
         }
 
         public void EnemyForcedStop()
         {
-            IsPasuse = false;
+            IsPause = false;
             EnemyStop();
         }
 
         public void EnemyForcedChaseStart()
         {
-            IsPasuse = true;
+            if(pauseRemainingTime>0)
+                IsPause = true;
             EnemyChaseStart();
         }
 
@@ -102,8 +120,18 @@ namespace Enemy
 
         private void EnemyPause()
         {
-            IsPasuse = true;
+            IsPause = true;
             pauseRemainingTime = 2.0f;
+        }
+
+        private void WalkSlowly()
+        {
+            navMeshAgent.speed /= 3.0f;
+        }
+
+        private void WalkNormally()
+        {
+            navMeshAgent.speed *= 3.0f;
         }
     }
 }
