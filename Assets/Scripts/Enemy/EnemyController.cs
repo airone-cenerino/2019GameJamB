@@ -20,9 +20,9 @@ namespace Enemy
         private NavMeshAgent navMeshAgent;
         private GameObject player;
 
-        private DoorController doorController;  // ぶつかった時に格納する
+        private GameObject door;  // ぶつかった時に格納する
         private EnemyCondition state;       // Enemyのステート
-        private bool IsPasuse = false;      // Enemyが一時停止中かどうか
+        private bool IsPause = false;      // Enemyが一時停止中かどうか
         private float pauseRemainingTime = 0.0f;
 
 
@@ -48,15 +48,17 @@ namespace Enemy
             }
 
             // 障害物による一時停止中かどうか
-            if (IsPasuse)
+            if (IsPause)
             {
                 EnemyStop();
                 pauseRemainingTime -= Time.deltaTime;
 
                 if (pauseRemainingTime < 0f)
                 {
-                    doorController.DoorClose();
-                    IsPasuse = false;
+                    
+                    door.GetComponent<DoorController>().DoorClose();
+                  
+                    IsPause = false;
                     EnemyChaseStart();
                 }
             }
@@ -67,7 +69,7 @@ namespace Enemy
             if (other.tag == "Door")
             {
                 EnemyPause();   // Enemy一時停止
-                doorController = other.gameObject.GetComponentInParent<DoorController>();
+                door = other.transform.root.gameObject;
             }
 
             if (other.tag == "Player")
@@ -80,13 +82,14 @@ namespace Enemy
 
         public void EnemyForcedStop()
         {
-            IsPasuse = false;
+            IsPause = false;
             EnemyStop();
         }
 
         public void EnemyForcedChaseStart()
         {
-            IsPasuse = true;
+            if(pauseRemainingTime>0)
+                IsPause = true;
             EnemyChaseStart();
         }
 
@@ -106,7 +109,7 @@ namespace Enemy
 
         private void EnemyPause()
         {
-            IsPasuse = true;
+            IsPause = true;
             pauseRemainingTime = 2.0f;
         }
     }
