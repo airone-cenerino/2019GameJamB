@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.SceneManagement;
+using Item;
 
 // Enemyにアタッチするスクリプト
 
@@ -19,6 +20,7 @@ namespace Enemy
         private NavMeshAgent navMeshAgent;
         private GameObject player;
 
+        private DoorController doorController;  // ぶつかった時に格納する
         private EnemyCondition state;       // Enemyのステート
         private bool IsPasuse = false;      // Enemyが一時停止中かどうか
         private float pauseRemainingTime = 0.0f;
@@ -53,6 +55,7 @@ namespace Enemy
 
                 if (pauseRemainingTime < 0f)
                 {
+                    doorController.DoorClose();
                     IsPasuse = false;
                     EnemyChaseStart();
                 }
@@ -64,6 +67,7 @@ namespace Enemy
             if (other.tag == "Door")
             {
                 EnemyPause();   // Enemy一時停止
+                doorController = other.gameObject.GetComponentInParent<DoorController>();
             }
 
             if (other.tag == "Player")
