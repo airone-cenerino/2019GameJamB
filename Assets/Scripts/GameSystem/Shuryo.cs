@@ -6,7 +6,3 @@
 //    UnityEngine.Application.Quit();
 //#endif
 //}
-//void Update()
-//{
-//   // if () Quit();
-//}
