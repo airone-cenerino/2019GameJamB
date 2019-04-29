@@ -23,8 +23,10 @@ namespace Player
             m_Camera = Camera.main;
             m_CharacterTargetRot = this.transform.localRotation;
             m_CameraTargetRot = m_Camera.transform.localRotation;
+#if UNITY_STANDALONE
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
+#endif
         }
 
         // Update is called once per frame
@@ -51,6 +53,31 @@ namespace Player
                 Cursor.lockState = CursorLockMode.None;
                 Cursor.visible = true;
             }
+        }
+        public void OnTriggerEnter(Collider other)
+        {
+            if (other.tag == "Books")
+            {
+                WalkSlowly();   // Enemy一時停止
+            }
+        }
+
+        public void OnTriggerExit(Collider other)
+        {
+            if (other.tag == "Books")
+            {
+                WalkNormally();
+            }
+        }
+
+        private void WalkSlowly()
+        {
+            moveSpeed /= 3.0f;
+        }
+
+        private void WalkNormally()
+        {
+            moveSpeed *= 3.0f;
         }
     }
 }
