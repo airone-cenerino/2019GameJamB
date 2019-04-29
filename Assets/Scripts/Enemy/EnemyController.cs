@@ -60,13 +60,18 @@ namespace Enemy
 
         public void OnTriggerEnter(Collider other)
         {
-            if(other.tag == "Player")
+            if (other.tag == "Door")
             {
-                SceneManager.LoadScene("GameOver");
-            }else if(other.tag == "Door")
-            {
+                Debug.Log("ドアに当たったよ");
                 EnemyPause();   // Enemy一時停止
             }
+
+            if (other.tag == "Player")
+            {
+                SceneManager.LoadScene("GameOver");
+            }
+
+
         }
 
         public void EnemyForcedStop()
