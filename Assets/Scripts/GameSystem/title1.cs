@@ -16,11 +16,10 @@ namespace GameSystem
         // Update is called once per frame
         void Update()
         {
-            Debug.Log("aaa");
-            if (Input.GetMouseButtonDown(0))
+            if (Input.GetMouseButtonDown(0) || Input.GetKeyDown("joystick button 15"))
             {
                 SceneManager.LoadScene("GameScene");
-            };
+            }
         }
     }
 }
