@@ -1,21 +1,22 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+namespace Item {
+    public class testItem : ItemBase
+    {
+        // Start is called before the first frame update
+        void Start()
+        {
+        }
 
-public class testItem : GameSystem.Item
-{
-    // Start is called before the first frame update
-    void Start()
-    {
-    }
+        // Update is called once per frame
+        void Update()
+        {
 
-    // Update is called once per frame
-    void Update()
-    {
-      
-    }
-    public override void Use()
-    {
-        Destroy(gameObject);
+        }
+        public override void Use()
+        {
+            Destroy(gameObject);
+        }
     }
 }

@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace GameSystem
+namespace Item
 {
-    abstract public class Item : MonoBehaviour
+    abstract public class ItemBase : MonoBehaviour
     {
 
         public abstract void Use();
