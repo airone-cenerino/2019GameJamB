@@ -6,11 +6,28 @@ namespace Item
 {
     public class DoorController : ItemBase
     {
+        [SerializeField] GameObject doorCollider;
+        [SerializeField] Animator doorAnimator;
+        float time = 2.0f;
+
+        private void Update()
+        {
+            if (Input.GetKeyDown("space"))
+            {
+                Use();
+            }
+        }
+
         public override void Use()
         {
+            doorCollider.SetActive(true);
+            doorAnimator.SetTrigger("DoorOpen");
+        }
 
-
-
+        public void DoorClose()
+        {
+            doorCollider.SetActive(false);
+            doorAnimator.SetTrigger("DoorClose");
         }
     }
 }
