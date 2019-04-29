@@ -27,7 +27,7 @@ namespace Player
             {
                 // アイテムに対する処理を書く
                 mat = hit.collider.gameObject.GetComponent<Renderer>().material;
-                mat.SetFloat("_EdgeWidth", 5f);
+                mat.SetFloat("_EdgeWidth", 10f);
                 if (Input.GetMouseButtonDown(0) || Input.GetKeyDown("joystick button 15"))
                 {
                     hit.collider.gameObject.GetComponent<Item.ItemBase>().Use();
