@@ -23,7 +23,7 @@ RenderSettings:
   m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
-  m_AmbientIntensity: 1
+  m_AmbientIntensity: 0
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
   m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -96,7 +96,8 @@ LightmapSettings:
     m_PVRFilteringAtrousPositionSigmaAO: 1
     m_ShowResolutionOverlay: 1
     m_ExportTrainingData: 0
-  m_LightingDataAsset: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: d153e71b5f18e134c99ed821480b858f,
+    type: 2}
   m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
@@ -1265,7 +1266,7 @@ Light:
   m_Enabled: 1
   serializedVersion: 9
   m_Type: 1
-  m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
@@ -1567,6 +1568,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: DoorPivot
       objectReference: {fileID: 0}
+    - target: {fileID: 1670540880529182812, guid: 12b773163dd8089418efb82a23ddabe6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Door
+      objectReference: {fileID: 0}
     - target: {fileID: 4265311704352189850, guid: 12b773163dd8089418efb82a23ddabe6,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1580,7 +1586,7 @@ PrefabInstance:
     - target: {fileID: 4265311704352189850, guid: 12b773163dd8089418efb82a23ddabe6,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -4.65
       objectReference: {fileID: 0}
     - target: {fileID: 4265311704352189850, guid: 12b773163dd8089418efb82a23ddabe6,
         type: 3}
@@ -1695,7 +1701,7 @@ PrefabInstance:
     - target: {fileID: 169929603517500639, guid: 7631ecad0718b1c48858219704157bfc,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.441
+      value: 0.81
       objectReference: {fileID: 0}
     - target: {fileID: 169929603517500639, guid: 7631ecad0718b1c48858219704157bfc,
         type: 3}
@@ -1705,7 +1711,7 @@ PrefabInstance:
     - target: {fileID: 169929603517500639, guid: 7631ecad0718b1c48858219704157bfc,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 4.407
+      value: 1.65
       objectReference: {fileID: 0}
     - target: {fileID: 169929603517500639, guid: 7631ecad0718b1c48858219704157bfc,
         type: 3}

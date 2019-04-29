@@ -18,7 +18,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6136104111435787769
 Transform:
   m_ObjectHideFlags: 0
@@ -218,8 +218,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   booksInShelf: {fileID: 3367776703470103110}
-  scatteredBooks: {fileID: 1902925207762547114, guid: fbcd9c4916994bc4c8d514167d1ceb57,
-    type: 3}
+  scatteredBooks: {fileID: 1941026692060226090}
 --- !u!1 &3792047027794327869
 GameObject:
   m_ObjectHideFlags: 0

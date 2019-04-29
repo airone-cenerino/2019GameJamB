@@ -77,7 +77,18 @@ namespace Enemy
                 SceneManager.LoadScene("GameOver");
             }
 
+            if (other.tag == "Books")
+            {
+                WalkSlowly();   // Enemy一時停止
+            }
+        }
 
+        public void OnTriggerExit(Collider other)
+        {
+            if(other.tag == "Books")
+            {
+                WalkNormally();
+            }
         }
 
         public void EnemyForcedStop()
@@ -111,6 +122,16 @@ namespace Enemy
         {
             IsPause = true;
             pauseRemainingTime = 2.0f;
+        }
+
+        private void WalkSlowly()
+        {
+            navMeshAgent.speed /= 3.0f;
+        }
+
+        private void WalkNormally()
+        {
+            navMeshAgent.speed *= 3.0f;
         }
     }
 }
