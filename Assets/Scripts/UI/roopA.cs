@@ -10,12 +10,15 @@ public class roopA : MonoBehaviour
 
    public void changeNext()
     {
-        
+       if (Time.timeSinceLevelLoad > 6.0f)
+        {
+            SceneManager.LoadScene("Prologue");
+        } 
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        changeNext();
     }
 }
