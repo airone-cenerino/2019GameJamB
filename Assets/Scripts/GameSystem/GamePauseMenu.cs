@@ -5,6 +5,8 @@ using UnityEngine.UI;
 using Enemy;
 using UnityEngine.SceneManagement;
 
+using GameSystem;
+
 
 // ゲーム中のポーズ画面管理
 
