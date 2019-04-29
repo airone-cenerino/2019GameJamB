@@ -26,21 +26,30 @@ namespace GameSystem
             switch (text_number)
             {
                 case 0:
-                    letter.text = "こんばんは…\n" +
-                                  "一人で来ているんですが、\n" +
-                                  "少し寂しくなってきてしまって…";
+                    letter.color = new Color(255f / 255f, 0f / 255f, 0f / 255f);
+                    letter.text = "「こんばんは…\n" +
+                                  "ずっと一人でここにいるのでひましてるんですが、\n" +
+                                  "あまりにも血に飢えてしまって…";
                     break;
                 case 1:
-                    letter.text = "もしよかったらお会いできませんか？\n" +
-                                  "姿を見られるのは恥ずかしいのでこっそり伺います";
+                    letter.text = "もしよかったら殺されてくれませんか？？\n" +
+                                  "顔を見られるのは恥ずかしいので、\n" +
+                                  "館内は消灯して…\n";
                     break;
                 case 2:
-                    letter.text = "もしOKでしたら入り口近くにあるコピー機のサイドに\n" +
-                                  "目隠しになるヘアバンドを置いておきます";
+                    letter.text = "もしOKでしたら、音を立てて場所を教えてください…\n" +
+                                  "それでおとなしく立っていれば結構です…\n" +
+                                  "すぐに楽になりますので…";
                     break;
                 case 3:
-                    letter.text = "それで目隠しをして、部屋を暗くして\n" +
-                                  "ドアを少し開けて待っていてください";
+                    letter.text = "私に貴方の血を、血を、血、血、血・・\n" +
+                                  "・・・・・・・・血を：＠。＋＞＋＋＊\n" +
+                                  "‘＞：・。；。＠」";
+                    break;
+                case 4:
+                    letter.color = new Color(255f / 255f, 255f / 255f, 255f / 255f);
+                    letter.text = "危険な予感がする…\n" +
+                                  "逃げないと";
                     break;
                 default:
                     letter.text = "XXXXXX";
@@ -49,7 +58,7 @@ namespace GameSystem
 
             if (Input.GetMouseButtonDown(0))
             {
-                if (text_number <= 3) text_number++;
+                if (text_number < 4) text_number++;
                 //if (text_number == 3) SceenManager.LoadScene("");
             }
         }
