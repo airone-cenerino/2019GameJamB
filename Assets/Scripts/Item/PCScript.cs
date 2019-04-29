@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class PCScript : Item.ItemBase
 {
-    private Material mat;
+    public Renderer renderer;
     // Start is called before the first frame update
     void Start()
     {
-        mat = GetComponent<Material>();
+        renderer = GetComponent<Renderer>();
     }
     public override void Use()
     {
-        
+       // renderer.material.SetFloat("_EdgeWidth", 10f);
     }
 
     // Update is called once per frame
