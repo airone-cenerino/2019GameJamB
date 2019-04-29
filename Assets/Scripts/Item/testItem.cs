@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class testItem : Item
+public class testItem : GameSystem.Item
 {
     // Start is called before the first frame update
     void Start()
