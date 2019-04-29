@@ -8,7 +8,7 @@ using UnityEngine.SceneManagement;
 
 // ゲーム中のポーズ画面管理
 
-namespace System
+namespace GameSystem
 {
     public class GamePauseMenu : MonoBehaviour
     {
