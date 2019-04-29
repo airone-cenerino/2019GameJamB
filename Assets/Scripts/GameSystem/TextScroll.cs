@@ -49,8 +49,8 @@ namespace GameSystem
 
             if (Input.GetMouseButtonDown(0))
             {
-                if (text_number < 3) text_number++;
-                if (text_number == 3) SceenManager.LoadScene("");
+                if (text_number <= 3) text_number++;
+                //if (text_number == 3) SceenManager.LoadScene("");
             }
         }
     }
