@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using GameSystem;
 
 
 public class roopA : MonoBehaviour
@@ -12,6 +13,7 @@ public class roopA : MonoBehaviour
     {
        if (Time.timeSinceLevelLoad > 6.0f)
         {
+            LoopManager.loop++;
             SceneManager.LoadScene("Prologue");
         } 
     }
