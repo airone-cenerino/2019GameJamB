@@ -8,6 +8,7 @@ TagManager:
   - Door
   - Books
   - Item
+  - Letter
   layers:
   - Default
   - TransparentFX

@@ -6,11 +6,11 @@ namespace Item
 {
     public class LetterController : ItemBase
     {
-        [SerializeField] private GameObject canvas;
+        [SerializeField] private GameObject canvasOnOff;
 
         public override void Use()
         {
-            canvas.SetActive(true);
+            canvasOnOff.SetActive(true);
         }
     }
 }
