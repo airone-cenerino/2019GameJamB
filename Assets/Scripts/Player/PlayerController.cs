@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.XR;
 
 namespace Player
 {
@@ -14,7 +15,11 @@ namespace Player
         void Start()
         {
             m_camera = Camera.main;
+#if UNITY_STANDALONE
             center = new Vector3(Screen.width / 2, Screen.height / 2);
+#elif UNITY_WSA
+            center = new Vector3(XRSettings.eyeTextureWidth * 3, XRSettings.eyeTextureHeight * 2.6f);
+#endif
         }
 
         // Update is called once per frame
@@ -23,11 +28,11 @@ namespace Player
             // 画面の中心にレイを飛ばす
             Ray ray = m_camera.ScreenPointToRay(center);
             RaycastHit hit;
-            if (Physics.Raycast(ray, out hit, 100f))
+            if (Physics.Raycast(ray, out hit, 100f) && hit.collider.gameObject.CompareTag("Item"))
             {
                 // アイテムに対する処理を書く
                 mat = hit.collider.gameObject.GetComponent<Renderer>().material;
-                mat.SetFloat("_EdgeWidth", 10f);
+                mat.SetInt("_Brightness", 2);
                 if (Input.GetMouseButtonDown(0) || Input.GetKeyDown("joystick button 15"))
                 {
                     hit.collider.gameObject.GetComponent<Item.ItemBase>().Use();
@@ -36,7 +41,7 @@ namespace Player
             }
             else if (reset)
             {
-                mat.SetFloat("_EdgeWidth", 0f);
+                mat.SetInt("_Brightness", 1);
                 reset = false;
             }
         }
