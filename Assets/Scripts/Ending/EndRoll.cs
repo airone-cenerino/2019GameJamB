@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Video;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class EndRoll : MonoBehaviour
@@ -18,7 +18,7 @@ public class EndRoll : MonoBehaviour
     void Update()
     {
         time += Time.deltaTime;
-        if(time >= 31.0)
+        if(time >= 30.0)
             SceneManager.LoadScene("Epilogue2");
     }
 }
