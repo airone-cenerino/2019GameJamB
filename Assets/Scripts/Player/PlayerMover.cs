@@ -8,7 +8,8 @@ namespace Player
     {
         [SerializeField]
         float rotateSpeed = 2.0f;
-        public static float moveSpeed = 60f;
+        public static float moveSpeed;
+        public float playerMoveSpeed;
         private Camera m_Camera;
         private CharacterController controller;
         private Quaternion m_CharacterTargetRot;
@@ -18,6 +19,7 @@ namespace Player
         // Start is called before the first frame update
         void Start()
         {
+            moveSpeed = playerMoveSpeed;
             controller = GetComponent<CharacterController>();
             m_Camera = Camera.main;
             m_CharacterTargetRot = this.transform.localRotation;

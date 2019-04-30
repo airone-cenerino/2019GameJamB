@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using Player;
 using UnityEngine.UI;
 
 namespace GameSystem
@@ -9,8 +9,13 @@ namespace GameSystem
 
     public class TextScroll : MonoBehaviour
     {
+        public bool IsReadFinish = false;
+        [SerializeField] private PlayerMover player;
+        [SerializeField] private GameObject enemy;
         public GameObject text_object = null;
         public int text_number = 0;
+        [SerializeField] private GameObject canvas;
+        [SerializeField] private float PlayerSpeed = 500f;
 
         // Start is called before the first frame update
         void Start()
@@ -59,7 +64,15 @@ namespace GameSystem
             if (Input.GetMouseButtonDown(0))
             {
                 if (text_number < 4) text_number++;
-                //if (text_number == 3) SceenManager.LoadScene("");
+
+                // 読み終わり
+                if (text_number == 4)
+                {
+                    canvas.SetActive(false);
+                    PlayerMover.moveSpeed = player.playerMoveSpeed;
+                    enemy.SetActive(true);
+                    IsReadFinish = true;
+                }
             }
         }
     }
