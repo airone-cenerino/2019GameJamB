@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2184864767589668474}
   - component: {fileID: 5579603170121296515}
   - component: {fileID: 9204506515155949235}
+  - component: {fileID: 3388877338163315186}
   m_Layer: 0
   m_Name: letter
   m_TagString: Item
@@ -89,5 +90,18 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.9999999, y: 0.25642288, z: 2.0004406}
+  m_Size: {x: 4, y: 4, z: 4}
   m_Center: {x: 0, y: 0.1150905, z: -0.00022035837}
+--- !u!114 &3388877338163315186
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6148096880169131615}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6926d2545ef75648932e46278c911bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canvasOnOff: {fileID: 0}

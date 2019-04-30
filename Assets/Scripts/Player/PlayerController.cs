@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR;
-
+using GameSystem;
 namespace Player
 {
     public class PlayerController : MonoBehaviour
@@ -13,6 +13,7 @@ namespace Player
         private Shader bright;
         private Shader standard;
         private bool reset = false;
+        [SerializeField] private Light light;
         // Start is called before the first frame update
         void Start()
         {
@@ -29,6 +30,13 @@ namespace Player
         // Update is called once per frame
         void Update()
         {
+            if (TextScroll.IsReadFinish)
+            {
+                light.enabled = true;
+            }
+
+
+
             // 画面の中心にレイを飛ばす
             Ray ray = m_camera.ScreenPointToRay(center);
             RaycastHit hit;

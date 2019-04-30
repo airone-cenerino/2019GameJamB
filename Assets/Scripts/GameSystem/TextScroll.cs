@@ -9,7 +9,7 @@ namespace GameSystem
 
     public class TextScroll : MonoBehaviour
     {
-        public bool IsReadFinish = false;
+        public static bool IsReadFinish = false;
         [SerializeField] private PlayerMover player;
         [SerializeField] private GameObject enemy;
         public GameObject text_object = null;

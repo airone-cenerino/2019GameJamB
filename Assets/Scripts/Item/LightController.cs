@@ -7,18 +7,18 @@ namespace Item
 {
     public class LightController : MonoBehaviour
     {
-        TextScroll textScroll;
+        GameObject canvas;
         bool flg = true;
 
         private void Start()
         {
-            textScroll = GameObject.FindGameObjectWithTag("Letter").GetComponent<TextScroll>();
+            canvas = GameObject.FindGameObjectWithTag("Letter");
         }
 
         // Update is called once per frame
         void Update()
         {
-            if (textScroll.IsReadFinish && flg)
+            if (TextScroll.IsReadFinish && flg)
             {
                 this.GetComponent<Light>().intensity = 0.2f;
                 flg = false;
