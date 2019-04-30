@@ -52,7 +52,7 @@ namespace Prologue
             if (LoopManager.loop >= 2 && text_number <= 8)
                 letter.text = text_line2[text_number] + "\n" + text_line2[text_number + 1] + "\n" + text_line2[text_number + 2];
 
-            if (Input.GetMouseButtonDown(0))
+            if (Input.GetMouseButtonDown(0) || Input.GetKeyDown("joystick button 15"))
             {
                 if ((LoopManager.loop == 1 && text_number >= 7) || (LoopManager.loop >= 2 && text_number >= 8))
                     SceneManager.LoadScene("GameScene");
