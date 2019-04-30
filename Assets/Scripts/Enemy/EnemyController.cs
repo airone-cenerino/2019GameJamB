@@ -69,7 +69,7 @@ namespace Enemy
             if (other.tag == "Door")
             {
                 EnemyPause();   // Enemy一時停止
-                door = other.transform.root.gameObject;
+                door = other.transform.parent.gameObject;
             }
 
             if (other.tag == "Player")

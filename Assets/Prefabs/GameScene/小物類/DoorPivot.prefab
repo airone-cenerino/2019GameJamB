@@ -26,7 +26,7 @@ Transform:
   m_GameObject: {fileID: 1670540880529182812}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -17.936989, y: -27.799566, z: -3.8010774}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.2989, y: 1, z: 1}
   m_Children:
   - {fileID: 7365452812913305166}
   m_Father: {fileID: 0}
@@ -107,7 +107,7 @@ GameObject:
   - component: {fileID: 1976058722154601592}
   - component: {fileID: 5210901831225286785}
   - component: {fileID: 890587958}
-  - component: {fileID: 890587955}
+  - component: {fileID: 217510918510274323}
   m_Layer: 0
   m_Name: Door
   m_TagString: Item
@@ -155,8 +155,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 115e30b331ddc9c41abdf08003e58dfb, type: 2}
-  - {fileID: 1550975326256456482, guid: a059faf60f9993243b6de92af326ceb9, type: 3}
+  - {fileID: 2100000, guid: e401971ee488669488ab7908d44341a1, type: 2}
+  - {fileID: 2100000, guid: e401971ee488669488ab7908d44341a1, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -189,7 +189,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.9999995, y: 8.882249, z: 2}
   m_Center: {x: 0, y: -0.0000052452083, z: 4.6586812e-21}
---- !u!114 &890587955
+--- !u!114 &217510918510274323
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

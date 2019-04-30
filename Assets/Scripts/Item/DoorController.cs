@@ -9,6 +9,7 @@ namespace Item
         [SerializeField] GameObject doorCollider;
         [SerializeField] Animator doorAnimator;
         float time = 2.0f;
+        private bool IsOpen = false;
 
         private void Update()
         {
@@ -20,14 +21,29 @@ namespace Item
 
         public override void Use()
         {
-            doorCollider.SetActive(true);
-            doorAnimator.SetTrigger("DoorOpen");
+            if (!IsOpen)
+            {
+                doorCollider.SetActive(true);
+                doorAnimator.SetTrigger("DoorOpen");
+                StartCoroutine("DoorOpenWait");
+            }
+            else
+            {
+                DoorClose();
+            }
         }
 
         public void DoorClose()
         {
             doorCollider.SetActive(false);
             doorAnimator.SetTrigger("DoorClose");
+            IsOpen = false;
+        }
+
+        private IEnumerator DoorOpenWait()
+        {
+            yield return new WaitForSeconds(1.0f);
+            IsOpen = true;
         }
     }
 }
