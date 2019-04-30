@@ -10,11 +10,15 @@ namespace Player
         private Camera m_camera;
         private Vector3 center;
         private Material mat;
+        private Shader bright;
+        private Shader standard;
         private bool reset = false;
         // Start is called before the first frame update
         void Start()
         {
             m_camera = Camera.main;
+            bright = Shader.Find("Custom/bright");
+            standard = Shader.Find("Standard");
 #if UNITY_STANDALONE
             center = new Vector3(Screen.width / 2, Screen.height / 2);
 #elif UNITY_WSA
@@ -32,7 +36,7 @@ namespace Player
             {
                 // アイテムに対する処理を書く
                 mat = hit.collider.gameObject.GetComponent<Renderer>().material;
-                mat.SetInt("_Brightness", 2);
+                mat.shader = bright;
                 if (Input.GetMouseButtonDown(0) || Input.GetKeyDown("joystick button 15"))
                 {
                     hit.collider.gameObject.GetComponent<Item.ItemBase>().Use();
@@ -41,7 +45,7 @@ namespace Player
             }
             else if (reset)
             {
-                mat.SetInt("_Brightness", 1);
+                mat.shader = standard;
                 reset = false;
             }
         }
