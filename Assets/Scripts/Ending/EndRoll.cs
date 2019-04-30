@@ -19,6 +19,6 @@ public class EndRoll : MonoBehaviour
     {
         time += Time.deltaTime;
         if(time >= 31.0)
-            SceneManager.LoadScene("title");
+            SceneManager.LoadScene("Epilogue2");
     }
 }
