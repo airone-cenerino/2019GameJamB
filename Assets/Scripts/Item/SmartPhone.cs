@@ -6,8 +6,10 @@ namespace Item
 {
     public class SmartPhone : ItemBase
     {
+        public static bool getS = false;
         public override void Use()
         {
+            getS = true;
             Destroy(gameObject);
         }
         // Start is called before the first frame update
