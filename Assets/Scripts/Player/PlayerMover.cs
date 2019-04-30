@@ -47,7 +47,7 @@ namespace Player
 #endif
             forward = new Vector3(m_Camera.transform.forward.x, 0, m_Camera.transform.forward.z).normalized;
             right = (Input.GetAxis("Horizontal") * m_Camera.transform.right);
-            moveDirection = (Input.GetAxis("Vertical") * forward).normalized;
+            moveDirection = (Input.GetAxis("Vertical") * forward + right).normalized;
             controller.Move(moveSpeed * moveDirection * Time.deltaTime);
             if (Input.GetKeyDown(KeyCode.Escape))
             {
