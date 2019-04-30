@@ -20,4 +20,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/GameClear.unity
     guid: d4f7cf2c29eeb17499cdd1dc305a5a4b
+  - enabled: 1
+    path: Assets/Scenes/Epilogue.unity
+    guid: 9d95cbb5a64dcc842ba4870f6615da3d
+  - enabled: 1
+    path: Assets/Scenes/Epilogue2.unity
+    guid: 709e7d053d69af24c9b15931c51a26ce
   m_configObjects: {}

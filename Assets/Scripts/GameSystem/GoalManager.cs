@@ -11,7 +11,7 @@ namespace System
         {
             if (other.tag == "Player")
             {
-                SceneManager.LoadScene("GameClear");
+                SceneManager.LoadScene("Epilogue");
             }
         }
     }
