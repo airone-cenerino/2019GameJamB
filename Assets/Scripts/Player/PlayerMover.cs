@@ -8,8 +8,7 @@ namespace Player
     {
         [SerializeField]
         float rotateSpeed = 2.0f;
-        [SerializeField]
-        float moveSpeed = 60f;
+        public static float moveSpeed = 60f;
         private Camera m_Camera;
         private CharacterController controller;
         private Quaternion m_CharacterTargetRot;
