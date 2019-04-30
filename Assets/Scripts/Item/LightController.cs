@@ -8,6 +8,7 @@ namespace Item
     public class LightController : MonoBehaviour
     {
         TextScroll textScroll;
+        bool flg = true;
 
         private void Start()
         {
@@ -17,9 +18,10 @@ namespace Item
         // Update is called once per frame
         void Update()
         {
-            if (textScroll.IsReadFinish)
+            if (textScroll.IsReadFinish && flg)
             {
-                gameObject.SetActive(false);
+                this.GetComponent<Light>().intensity = 0.2f;
+                flg = false;
             }
         }
     }
