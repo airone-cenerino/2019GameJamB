@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.XR;
 
 namespace Player
 {
@@ -14,7 +15,11 @@ namespace Player
         void Start()
         {
             m_camera = Camera.main;
+#if UNITY_STANDALONE
             center = new Vector3(Screen.width / 2, Screen.height / 2);
+#elif UNITY_WSA
+            center = new Vector3(XRSettings.eyeTextureWidth * 3, XRSettings.eyeTextureHeight * 2.6f);
+#endif
         }
 
         // Update is called once per frame
