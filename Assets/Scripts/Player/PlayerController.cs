@@ -32,15 +32,34 @@ namespace Player
             // 画面の中心にレイを飛ばす
             Ray ray = m_camera.ScreenPointToRay(center);
             RaycastHit hit;
-            if (Physics.Raycast(ray, out hit, 100f) && hit.collider.gameObject.CompareTag("Item"))
+            if (Physics.Raycast(ray, out hit, 100f) && (hit.collider.gameObject.CompareTag("Item")|| hit.collider.gameObject.CompareTag("Door")))
             {
+                Debug.Log(hit);
+
                 // アイテムに対する処理を書く
-                mat = hit.collider.gameObject.GetComponent<Renderer>().material;
+                if (hit.collider.gameObject.CompareTag("Door"))
+                {
+                    mat = hit.collider.transform.parent.gameObject.GetComponent<Renderer>().material;
+                }
+                else
+                {
+                    mat = hit.collider.gameObject.GetComponent<Renderer>().material;
+                }
                 mat.shader = bright;
+
                 if (Input.GetMouseButtonDown(0) || Input.GetKeyDown("joystick button 15"))
                 {
-                    hit.collider.gameObject.GetComponent<Item.ItemBase>().Use();
+                    if (hit.collider.gameObject.CompareTag("Door"))
+                    {
+                        hit.collider.transform.parent.gameObject.GetComponent<Item.ItemBase>().Use();
+                    }
+                    else
+                    {
+                        hit.collider.gameObject.GetComponent<Item.ItemBase>().Use();
+                    }
                 }
+
+
                 reset = true;
             }
             else if (reset)
