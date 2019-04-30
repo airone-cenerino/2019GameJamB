@@ -816,8 +816,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1410162302}
   - component: {fileID: 1410162305}
-  - component: {fileID: 1410162304}
   - component: {fileID: 1410162303}
+  - component: {fileID: 1410162304}
   m_Layer: 5
   m_Name: TextPanel
   m_TagString: Untagged
@@ -854,17 +854,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 1410162301}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 88883bd5adba7d84483bbfd4ee3b2f4c, type: 3}
+  m_Script: {fileID: 11500000, guid: 886e83aeaf8c5ae42acbf8c0e9e3069b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   text_object: {fileID: 308615646}
   text_number: 0
   text_line:
-  - "(\u306F\u3063\u3001\u3001\u3001)"
-  - "\u76EE\u899A\u3081\u308B\u3068\u305D\u3053\u306Fksk\u30CF\u30A6\u30B9\u3060\u3063\u305F\u3002"
-  - "(\u30B9\u30DE\u30DB\u306F\u30FB\u30FB\u30FB)"
-  - "\u78BA\u304B\u306B\u6795\u5143\u306B\u3042\u308B\u3002"
-  - "\u3088\u304B\u3063\u305F\u30FB\u30FB\u30FB\u3002"
+  - "(\u3042\u308C\u30FB\u30FB\u30FB\uFF1F)"
+  - "\u30B9\u30DE\u30DB\u3092\u6301\u3061\u4E0A\u3052\u308B\u3068\u3001\u305D\u3053\u306B\u306F\u4E00\u901A\u306E\u624B\u7D19\u304C\u3002"
+  - "(\u306A\u3093\u3060\u3053\u308C\u30FB\u30FB\u30FB\uFF1F)"
+  - "\u624B\u7D19\u3092\u958B\u3044\u3066\u307F\u308B\u3068\u30FB\u30FB\u30FB"
+  - 
+  - 
+  - "\u30DE \u30BF \u30A2 \u30BD \u30D3 \u30DE \u30B7 \u30E7"
 --- !u!114 &1410162304
 MonoBehaviour:
   m_ObjectHideFlags: 0
