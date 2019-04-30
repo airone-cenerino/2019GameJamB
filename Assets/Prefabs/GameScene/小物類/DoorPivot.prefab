@@ -107,7 +107,7 @@ GameObject:
   - component: {fileID: 1976058722154601592}
   - component: {fileID: 5210901831225286785}
   - component: {fileID: 890587958}
-  - component: {fileID: 890587955}
+  - component: {fileID: 217510918510274323}
   m_Layer: 0
   m_Name: Door
   m_TagString: Item
@@ -189,7 +189,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.9999995, y: 8.882249, z: 2}
   m_Center: {x: 0, y: -0.0000052452083, z: 4.6586812e-21}
---- !u!114 &890587955
+--- !u!114 &217510918510274323
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

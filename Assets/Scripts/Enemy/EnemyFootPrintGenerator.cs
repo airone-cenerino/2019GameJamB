@@ -45,7 +45,7 @@ namespace Enemy
                 audioSource.PlayOneShot(audioClips[Random.Range(0, audioClips.Count())]);   // 足音
 
                 // 足跡の座標
-                Vector3 instantiatePosition = new Vector3(transform.position.x, transform.position.y - capsuleCollider.height / 2f - 0.05f, transform.position.z);
+                Vector3 instantiatePosition = new Vector3(transform.position.x, transform.position.y - capsuleCollider.height / 2f + 0.05f, transform.position.z);
 
                 if (flg)
                 {
