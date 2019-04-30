@@ -12,7 +12,7 @@ namespace GameSystem
 
         private void Start()
         {
-            SceneManager.LoadScene("GameScene");
+           // SceneManager.LoadScene("GameScene");
         }
     }
 }
