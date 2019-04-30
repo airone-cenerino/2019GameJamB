@@ -55,6 +55,12 @@ namespace GameSystem
                     letter.color = new Color(255f / 255f, 255f / 255f, 255f / 255f);
                     letter.text = "危険な予感がする…\n" +
                                   "逃げないと";
+
+                    break;
+                case 5:
+                    IsReadFinish = true;
+                    letter.text = "ん？ブレーカーが落ちた?\n" +
+                                  "ひとまずスマホのライトをつけよう";
                     break;
                 default:
                     letter.text = "XXXXXX";
@@ -63,15 +69,14 @@ namespace GameSystem
 
             if (Input.GetMouseButtonDown(0))
             {
-                if (text_number < 4) text_number++;
+                if (text_number < 6) text_number++;
 
                 // 読み終わり
-                if (text_number == 4)
+                if (text_number == 6)
                 {
                     canvas.SetActive(false);
                     PlayerMover.moveSpeed = player.playerMoveSpeed;
                     enemy.SetActive(true);
-                    IsReadFinish = true;
                 }
             }
         }
