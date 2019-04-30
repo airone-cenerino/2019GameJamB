@@ -179,8 +179,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 169929603517500639}
-  - component: {fileID: 1808536626689663597}
-  - component: {fileID: 5964884938125427778}
   m_Layer: 0
   m_Name: BookShelf
   m_TagString: Item
@@ -206,33 +204,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1808536626689663597
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3747258541269663436}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fd04707999aad1444a77b5b1652d990f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  booksInShelf: {fileID: 3367776703470103110}
-  scatteredBooks: {fileID: 1941026692060226090}
---- !u!65 &5964884938125427778
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3747258541269663436}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 4, y: 8, z: 2}
-  m_Center: {x: 0, y: 4, z: 0}
 --- !u!1 &3792047027794327869
 GameObject:
   m_ObjectHideFlags: 0
@@ -244,6 +215,8 @@ GameObject:
   - component: {fileID: 8977008055552200150}
   - component: {fileID: 2922950455597703220}
   - component: {fileID: 8199335299004850444}
+  - component: {fileID: 2052033406338839518}
+  - component: {fileID: 4134129302115810190}
   m_Layer: 0
   m_Name: bookshelf1
   m_TagString: Item
@@ -310,6 +283,33 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &2052033406338839518
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3792047027794327869}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.5, y: 122.67504, z: 3.5}
+  m_Center: {x: -0.00000005960464, y: 56.11363, z: 0.13843347}
+--- !u!114 &4134129302115810190
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3792047027794327869}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd04707999aad1444a77b5b1652d990f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  booksInShelf: {fileID: 3367776703470103110}
+  scatteredBooks: {fileID: 1941026692060226090}
 --- !u!1 &6327651367583015823
 GameObject:
   m_ObjectHideFlags: 0

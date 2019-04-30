@@ -273,7 +273,7 @@ PrefabInstance:
     - target: {fileID: 659870039685718136, guid: e580dd4a5436a3848a70e7cf0a523317,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 659870039685718136, guid: e580dd4a5436a3848a70e7cf0a523317,
         type: 3}
@@ -444,7 +444,7 @@ PrefabInstance:
     - target: {fileID: 1745252930684567551, guid: f1b673341df29654e81bb27b8e659be9,
         type: 3}
       propertyPath: m_RenderMode
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1745252930684567551, guid: f1b673341df29654e81bb27b8e659be9,
         type: 3}
@@ -702,7 +702,7 @@ PrefabInstance:
     - target: {fileID: 7210541053481752887, guid: 265b5dbee8cba3345b03ffc05c6d54d5,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7210541053481752887, guid: 265b5dbee8cba3345b03ffc05c6d54d5,
         type: 3}
@@ -894,6 +894,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 2113595682768118464, guid: 2b3a1e85baa65cb498df38bbe5ea3352,
+        type: 3}
+      propertyPath: playerMoveSpeed
+      value: 2.4
+      objectReference: {fileID: 0}
     - target: {fileID: 2113595682768118466, guid: 2b3a1e85baa65cb498df38bbe5ea3352,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -932,7 +937,7 @@ PrefabInstance:
     - target: {fileID: 2113595682768118466, guid: 2b3a1e85baa65cb498df38bbe5ea3352,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 2113595682768118466, guid: 2b3a1e85baa65cb498df38bbe5ea3352,
         type: 3}
@@ -954,11 +959,6 @@ PrefabInstance:
       propertyPath: light
       value: 
       objectReference: {fileID: 1823655617}
-    - target: {fileID: 2113595682768118464, guid: 2b3a1e85baa65cb498df38bbe5ea3352,
-        type: 3}
-      propertyPath: playerMoveSpeed
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 6777685422029749884, guid: 2b3a1e85baa65cb498df38bbe5ea3352,
         type: 3}
       propertyPath: Loop
@@ -1026,7 +1026,7 @@ PrefabInstance:
     - target: {fileID: 6434119111485156064, guid: 647c83ca21ce3964aa8783419e16c2b3,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6434119111485156064, guid: 647c83ca21ce3964aa8783419e16c2b3,
         type: 3}
