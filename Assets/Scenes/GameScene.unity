@@ -284,6 +284,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 659870039685718134, guid: e580dd4a5436a3848a70e7cf0a523317,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 659870039685718142, guid: e580dd4a5436a3848a70e7cf0a523317,
         type: 3}
       propertyPath: horrorBGMAudioSource
@@ -727,7 +732,7 @@ PrefabInstance:
     - target: {fileID: 2113595682768118466, guid: 2b3a1e85baa65cb498df38bbe5ea3352,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2113595682768118466, guid: 2b3a1e85baa65cb498df38bbe5ea3352,
         type: 3}
@@ -753,6 +758,16 @@ PrefabInstance:
         type: 3}
       propertyPath: playerMoveSpeed
       value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 6777685422029749884, guid: 2b3a1e85baa65cb498df38bbe5ea3352,
+        type: 3}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6777685422029749884, guid: 2b3a1e85baa65cb498df38bbe5ea3352,
+        type: 3}
+      propertyPath: m_Volume
+      value: 0.1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2b3a1e85baa65cb498df38bbe5ea3352, type: 3}

@@ -13,10 +13,7 @@ namespace Item
 
         private void Update()
         {
-            if (Input.GetKeyDown("space"))
-            {
-                Use();
-            }
+
         }
 
         public override void Use()

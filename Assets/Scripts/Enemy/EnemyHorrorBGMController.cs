@@ -9,7 +9,7 @@ public class EnemyHorrorBGMController : MonoBehaviour
     [SerializeField] private AudioSource horrorBGMAudioSource;
     [SerializeField] private AudioClip horrorBGM;
 
-    private float horrorSoundStartDistance = 8f;   // 恐怖BGMが流れる距離
+    private float horrorSoundStartDistance = 10f;   // 恐怖BGMが流れる距離
     private float horrorSoundMaxVolume = 0.2f;
     private float horrorSoundVolume = 0.2f;
     private bool IsInHorrorSoundArea = false;
