@@ -67,7 +67,7 @@ namespace GameSystem
                     break;
             }
 
-            if (Input.GetMouseButtonDown(0))
+            if (Input.GetMouseButtonDown(0) || Input.GetKeyDown("joystick button 15"))
             {
                 if (text_number < 6) text_number++;
 

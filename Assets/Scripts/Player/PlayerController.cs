@@ -23,7 +23,7 @@ namespace Player
 #if UNITY_STANDALONE
             center = new Vector3(Screen.width / 2, Screen.height / 2);
 #elif UNITY_WSA
-            center = new Vector3(XRSettings.eyeTextureWidth * 3, XRSettings.eyeTextureHeight * 2.5f);
+            center = new Vector3(909, 770);
 #endif
         }
 

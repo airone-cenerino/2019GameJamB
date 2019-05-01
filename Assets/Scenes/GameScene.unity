@@ -444,13 +444,23 @@ PrefabInstance:
     - target: {fileID: 1745252930684567551, guid: f1b673341df29654e81bb27b8e659be9,
         type: 3}
       propertyPath: m_RenderMode
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1745252930684567551, guid: f1b673341df29654e81bb27b8e659be9,
         type: 3}
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 419891444}
+    - target: {fileID: 1745252930684567551, guid: f1b673341df29654e81bb27b8e659be9,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1745252930684567551, guid: f1b673341df29654e81bb27b8e659be9,
+        type: 3}
+      propertyPath: m_PlaneDistance
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1745252930604512365, guid: f1b673341df29654e81bb27b8e659be9,
         type: 3}
       propertyPath: player
