@@ -29,6 +29,7 @@ namespace GameSystem
             switch (text_number)
             {
                 case 0:
+                    PlayerMover.moveSpeed = 0.0f;
                     letter.color = new Color(255f / 255f, 0f / 255f, 0f / 255f);
                     letter.text = "「こんばんは…\n" +
                                   "ずっと一人でここにいるのでひましてるんですが、\n" +
@@ -72,6 +73,7 @@ namespace GameSystem
                 // 読み終わり
                 if (text_number == 6)
                 {
+                    PlayerMover.moveSpeed = player.playerMoveSpeed;
                     canvas.SetActive(false);
                     PlayerMover.moveSpeed = player.playerMoveSpeed;
                     enemy.SetActive(true);
