@@ -11,7 +11,7 @@ namespace Player
         public static float moveSpeed;
         public float playerMoveSpeed;
         private Camera m_Camera;
-        private CharacterController controller;
+        //private CharacterController controller;
         private Quaternion m_CharacterTargetRot;
         private Quaternion m_CameraTargetRot;
         private Vector3 forward, right;
@@ -20,7 +20,7 @@ namespace Player
         void Start()
         {
             moveSpeed = playerMoveSpeed;
-            controller = GetComponent<CharacterController>();
+            // controller = GetComponent<CharacterController>();
             m_Camera = Camera.main;
             m_CharacterTargetRot = this.transform.localRotation;
             m_CameraTargetRot = m_Camera.transform.localRotation;
@@ -48,7 +48,7 @@ namespace Player
             forward = new Vector3(m_Camera.transform.forward.x, 0, m_Camera.transform.forward.z).normalized;
             right = (Input.GetAxis("Horizontal") * m_Camera.transform.right);
             moveDirection = (Input.GetAxis("Vertical") * forward + right).normalized;
-            controller.Move(moveSpeed * moveDirection * Time.deltaTime);
+            this.transform.position += moveSpeed * moveDirection * Time.deltaTime;
             if (Input.GetKeyDown(KeyCode.Escape))
             {
                 Cursor.lockState = CursorLockMode.None;
