@@ -15,6 +15,7 @@ public class roopA : MonoBehaviour
         {
             LoopManager.loop++;
             SceneManager.LoadScene("Prologue");
+            TextScroll.IsReadFinish = false;
         } 
     }
 
