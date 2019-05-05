@@ -983,23 +983,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2113595682246399025, guid: 2b3a1e85baa65cb498df38bbe5ea3352,
         type: 3}
-      propertyPath: field of view
-      value: 26.991467
+      propertyPath: m_Depth
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2113595682246399025, guid: 2b3a1e85baa65cb498df38bbe5ea3352,
         type: 3}
-      propertyPath: m_projectionMatrixMode
-      value: 1
+      propertyPath: far clip plane
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 2113595682246399025, guid: 2b3a1e85baa65cb498df38bbe5ea3352,
         type: 3}
       propertyPath: near clip plane
       value: 0.15
       objectReference: {fileID: 0}
-    - target: {fileID: 2113595682246399025, guid: 2b3a1e85baa65cb498df38bbe5ea3352,
+    - target: {fileID: 2113595682768118464, guid: 2b3a1e85baa65cb498df38bbe5ea3352,
         type: 3}
-      propertyPath: far clip plane
-      value: 100
+      propertyPath: rotateSpeed
+      value: 80
       objectReference: {fileID: 0}
     - target: {fileID: 2113595682768118466, guid: 2b3a1e85baa65cb498df38bbe5ea3352,
         type: 3}
@@ -16120,6 +16120,21 @@ PrefabInstance:
       propertyPath: canvasOnOff
       value: 
       objectReference: {fileID: 1239812585}
+    - target: {fileID: 3254241094897239286, guid: 647c83ca21ce3964aa8783419e16c2b3,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 195291537455778639, guid: 647c83ca21ce3964aa8783419e16c2b3,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8486545224887272242, guid: 647c83ca21ce3964aa8783419e16c2b3,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 647c83ca21ce3964aa8783419e16c2b3, type: 3}
 --- !u!82 &2101153785 stripped
