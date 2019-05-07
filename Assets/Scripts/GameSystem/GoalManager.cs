@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-namespace System
+namespace GameSystem
 {
     public class GoalManager : MonoBehaviour
     {
         public void OnTriggerEnter(Collider other)
         {
-            if (other.tag == "Player")
+            if (other.tag == "Player" && TextScroll.IsReadFinish)
             {
                 SceneManager.LoadScene("Epilogue");
             }
