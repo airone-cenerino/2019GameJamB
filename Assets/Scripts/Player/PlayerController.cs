@@ -40,7 +40,7 @@ namespace Player
             // 画面の中心にレイを飛ばす
             Ray ray = m_camera.ScreenPointToRay(center);
             RaycastHit hit;
-            if (Physics.Raycast(ray, out hit, 100f) && (hit.collider.gameObject.CompareTag("Item")|| hit.collider.gameObject.CompareTag("Door")))
+            if (Physics.Raycast(ray, out hit, 20f) && (hit.collider.gameObject.CompareTag("Item")|| hit.collider.gameObject.CompareTag("Door")))
             {
                 Debug.Log(hit);
 
