@@ -9,10 +9,15 @@ namespace GameSystem
         // Start is called before the first frame update
         void Start()
         {
-            if(LoopManager.loop > 1)
+        }
+
+        private void Update()
+        {
+            if (LoopManager.loop > 1 && TextScroll.IsReadFinish)
             {
                 this.gameObject.SetActive(false);
             }
+
         }
     }
 }
