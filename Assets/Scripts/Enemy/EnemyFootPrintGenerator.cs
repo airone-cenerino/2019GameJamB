@@ -13,7 +13,7 @@ namespace Enemy
         private CapsuleCollider capsuleCollider;
 
         private float walkedDistance = 0.0f;    // 歩いた距離
-        private float stepLength = 1f;          // 1歩の長さ
+        private float stepLength = 1.3f;          // 1歩の長さ
         private Vector3 lastPosition;           // 1フレーム前の場所
         private bool flg = false;               // 右か左かの確認
 

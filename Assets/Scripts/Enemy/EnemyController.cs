@@ -24,6 +24,7 @@ namespace Enemy
         private EnemyCondition state;       // Enemyのステート
         private bool IsPause = false;      // Enemyが一時停止中かどうか
         private float pauseRemainingTime = 0.0f;
+        private float time = 0.0f;
 
 
         // Start is called before the first frame update
@@ -37,6 +38,8 @@ namespace Enemy
         // Update is called once per frame
         void Update()
         {
+            time += Time.deltaTime;
+
              // ステート管理
             if(state == EnemyCondition.Chase)
             {
@@ -61,6 +64,11 @@ namespace Enemy
                     IsPause = false;
                     EnemyChaseStart();
                 }
+            }
+
+            if(time >= 80f)
+            {
+                navMeshAgent.speed = 3.2f;
             }
         }
 
