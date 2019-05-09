@@ -29,9 +29,14 @@ public class Epilogue : MonoBehaviour
         if (Input.GetMouseButtonDown(0) || Input.GetKeyDown("joystick button 15"))
         {
             if (text_number >= 2)
+            {
+#if UNITY_STANDALONE
                 SceneManager.LoadScene("GameClear");
-
-            if (text_number < 2)
+#elif UNITY_WSA
+                SceneManager.LoadScene("Epilogue2");
+#endif
+            }
+                if (text_number < 2)
                 text_number++;
 
         }

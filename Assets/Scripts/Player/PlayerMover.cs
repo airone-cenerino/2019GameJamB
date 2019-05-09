@@ -40,10 +40,7 @@ namespace Player
             if(Input.GetKeyDown("joystick button 19")){
                 UnityEngine.XR.InputTracking.Recenter();
             }
-            if(Input.GetKey("joystick button 9"))
-            {
-                this.transform.rotation *= Quaternion.Euler(0, rotateSpeed * Input.GetAxis("Touch"), 0);
-            }
+            this.transform.rotation *= Quaternion.Euler(0, rotateSpeed * Input.GetAxis("Touch"), 0);
 #endif
             forward = new Vector3(m_Camera.transform.forward.x, 0, m_Camera.transform.forward.z).normalized;
             right = (Input.GetAxis("Horizontal") * m_Camera.transform.right);

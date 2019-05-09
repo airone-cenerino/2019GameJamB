@@ -13,13 +13,14 @@ namespace Player
         private Shader bright;
         private Shader standard;
         private bool reset = false;
-        [SerializeField] private Light light;
+        private Light light;
         // Start is called before the first frame update
         void Start()
         {
             m_camera = Camera.main;
             bright = Shader.Find("Custom/bright");
             standard = Shader.Find("Standard");
+            light = Camera.main.GetComponent<Light>();
 #if UNITY_STANDALONE
             center = new Vector3(Screen.width / 2, Screen.height / 2);
 #elif UNITY_WSA
